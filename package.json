@@ -1,0 +1,38 @@
+{
+  "name": "playwright-e2e-bdd-framework",
+  "version": "1.0.0",
+  "description": "Enterprise BDD Hybrid Automation Framework — Playwright + TypeScript + Cucumber + OOP",
+  "scripts": {
+    "test": "node scripts/runCucumber.js",
+    "test:chrome": "cross-env BROWSER=chromium cucumber-js",
+    "test:firefox": "cross-env BROWSER=firefox cucumber-js",
+    "test:webkit": "cross-env BROWSER=webkit cucumber-js",
+    "test:headed": "node scripts/runCucumber.js --HEADLESS=false",
+    "test:headed:smoke": "node scripts/runCucumber.js --HEADLESS=false smoke",
+    "test:headed:regression": "node scripts/runCucumber.js --HEADLESS=false regression",
+    "test:headed:sanity": "node scripts/runCucumber.js --HEADLESS=false sanity",
+    "test:smoke": "node scripts/runCucumber.js smoke",
+    "test:regression": "node scripts/runCucumber.js regression",
+    "test:sanity": "node scripts/runCucumber.js sanity",
+    "test:parallel": "node scripts/runParallel.js",
+    "report": "node scripts/generateReport.js",
+    "test:full": "cucumber-js && node scripts/generateReport.js",
+    "clean": "rimraf reports/html reports/screenshots reports/*.json reports/*.log",
+    "install:browsers": "npx playwright install"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.44.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "playwright": "^1.44.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@types/node": "^20.14.0",
+    "multiple-cucumber-html-reporter": "^3.7.0",
+    "rimraf": "^5.0.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

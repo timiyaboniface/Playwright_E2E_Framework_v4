@@ -1,0 +1,7 @@
+testId,description,browser,environment,headless,baseUrl,username,password,firstName,lastName,postalCode,productName,parallelWorkers,retryCount,active
+TC_SMOKE_VALID_001,Smoke valid login,chromium,dev,TRUE,https://www.saucedemo.com,standard_user,secret_sauce,Test,User,10001,,1,0,yes
+TC_SMOKE_INVALID_001,Smoke invalid login,chromium,dev,TRUE,https://www.saucedemo.com,invalid_user,wrong_password,Invalid,User,00000,,1,0,yes
+TC_REGRESSION_E2E_001,Regression full purchase flow 1,chromium,dev,TRUE,https://www.saucedemo.com,standard_user,secret_sauce,John,Doe,10001,Sauce Labs Backpack,1,1,yes
+TC_REGRESSION_E2E_002,Regression full purchase flow 2,firefox,dev,TRUE,https://www.saucedemo.com,standard_user,secret_sauce,Jane,Smith,20002,Sauce Labs Bike Light,1,1,yes
+TC_SANITY_CART_001,Sanity cart badge validation,chromium,dev,TRUE,https://www.saucedemo.com,standard_user,secret_sauce,Cart,Check,30003,Sauce Labs Bolt T-Shirt,1,0,yes
+TC_REGRESSION_CHECKOUT_EMPTY_001,Regression checkout empty validation,chromium,dev,TRUE,https://www.saucedemo.com,standard_user,secret_sauce,Empty,Checkout,40004,Sauce Labs Backpack,1,0,yes
